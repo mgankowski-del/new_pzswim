@@ -1,0 +1,1194 @@
+<<<<<<< HEAD
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+.w{width:100%;background:#fff;font-family:var(--font-sans);font-size:15px;line-height:1.6;color:#111;overflow:hidden}
+
+/* ── NAV ── */
+.nav{background:#0a1c4a;display:flex;align-items:center;padding:0 20px;height:54px;gap:16px}
+.nav-logo{display:flex;align-items:center;gap:9px;flex-shrink:0}
+.nav-brand{color:#fff;font-size:12px;font-weight:500;line-height:1.2;white-space:nowrap}
+.nav-brand small{display:block;color:#7ec8f7;font-size:9px;letter-spacing:.07em;text-transform:uppercase;font-weight:400}
+.nav-menu{display:flex;gap:0;flex:1;justify-content:center;overflow:hidden}
+.nav-menu a{color:#bcd0ee;font-size:11.5px;text-decoration:none;padding:4px 9px;border-radius:4px;white-space:nowrap}
+.nav-menu a:hover{color:#fff;background:rgba(255,255,255,.07)}
+.nav-btn{background:#e8b00a;color:#0a1c4a;font-size:11px;font-weight:500;padding:7px 13px;border-radius:6px;text-decoration:none;white-space:nowrap;flex-shrink:0;line-height:1.3}
+
+/* ── HERO ── */
+.hero{background:#0a1c4a;position:relative;overflow:hidden;padding:52px 28px 0}
+.hero-content{position:relative;z-index:2;max-width:500px;padding-bottom:180px}
+.hero-badge{display:inline-flex;align-items:center;gap:7px;background:rgba(232,176,10,.15);border:1px solid rgba(232,176,10,.35);border-radius:20px;padding:4px 12px;margin-bottom:16px}
+.hero-badge-dot{width:7px;height:7px;border-radius:50%;background:#e8b00a}
+.hero-badge span{color:#e8b00a;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase}
+.hero-title{color:#fff;font-size:30px;font-weight:500;line-height:1.2;margin-bottom:12px}
+.hero-title em{color:#7ec8f7;font-style:normal}
+.hero-sub{color:#8aadd4;font-size:14px;margin-bottom:24px}
+.hero-btns{display:flex;gap:10px}
+.btn-gold{background:#e8b00a;color:#0a1c4a;font-size:12.5px;font-weight:500;padding:10px 18px;border-radius:7px;text-decoration:none}
+.btn-ghost{border:1px solid rgba(255,255,255,.3);color:#fff;font-size:12.5px;padding:10px 18px;border-radius:7px;text-decoration:none}
+.lanes-pool{position:absolute;bottom:0;left:0;right:0;height:180px;z-index:1}
+
+/* ── DISCIPLINES ── */
+.disc-row{background:#0d2260;display:flex;gap:0;overflow:hidden}
+.disc-pill{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:13px 6px;cursor:pointer;border-right:1px solid rgba(255,255,255,.08)}
+.disc-pill:last-child{border-right:none}
+.disc-pill:hover{background:rgba(255,255,255,.07)}
+.disc-pill svg{width:26px;height:26px;margin-bottom:5px}
+.disc-pill span{color:#8aadd4;font-size:10px;text-align:center;line-height:1.2}
+.disc-pill:hover span{color:#fff}
+
+/* ── TICKER ── */
+.ticker{background:#e8b00a;padding:7px 20px;display:flex;align-items:center;gap:10px;overflow:hidden}
+.ticker-pill{background:#0a1c4a;color:#fff;font-size:10px;font-weight:500;padding:3px 9px;border-radius:4px;white-space:nowrap;letter-spacing:.05em;flex-shrink:0}
+.ticker-wrap{overflow:hidden;flex:1}
+.ticker-text{font-size:12.5px;color:#0a1c4a;font-weight:500;white-space:nowrap;display:inline-block;animation:scroll 30s linear infinite}
+@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ── MAIN ── */
+.main{display:grid;grid-template-columns:1fr 290px;gap:0}
+.news-col{padding:26px 22px}
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:16px}
+.sec-title{font-size:16px;font-weight:500;color:#0a1c4a;display:flex;align-items:center;gap:8px}
+.sec-title::before{content:'';display:block;width:4px;height:17px;background:#e8b00a;border-radius:2px}
+.sec-link{font-size:12px;color:#1a3a7a;text-decoration:none}
+.news-featured{border-radius:10px;overflow:hidden;border:.5px solid #dce6f7;margin-bottom:12px}
+.news-feat-img{height:170px;background:linear-gradient(135deg,#0d2260,#1a4a9a);display:flex;flex-direction:column;justify-content:space-between;padding:14px}
+.news-feat-tag{background:#e8b00a;color:#0a1c4a;font-size:10px;font-weight:500;padding:3px 9px;border-radius:4px;align-self:flex-start}
+.news-feat-body{padding:12px}
+.news-feat-date{font-size:11px;color:#7a8aa0;margin-bottom:4px}
+.news-feat-title{font-size:13.5px;font-weight:500;color:#0a1c4a;line-height:1.3}
+.news-small-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.news-sm{border-radius:8px;overflow:hidden;border:.5px solid #dce6f7}
+.news-sm-img{height:76px;display:flex;align-items:flex-end;padding:8px}
+.nsi-a{background:linear-gradient(135deg,#0b3d7a,#0d2260)}
+.nsi-b{background:linear-gradient(135deg,#0a4d5e,#062030)}
+.nsi-c{background:linear-gradient(135deg,#3a1c7a,#1c0d4a)}
+.nsi-d{background:linear-gradient(135deg,#0a5e3a,#063d25)}
+.news-sm-tag{background:rgba(255,255,255,.2);color:#fff;font-size:9px;font-weight:500;padding:2px 7px;border-radius:3px}
+.news-sm-body{padding:9px}
+.news-sm-date{font-size:10px;color:#7a8aa0;margin-bottom:2px}
+.news-sm-title{font-size:11.5px;font-weight:500;color:#0a1c4a;line-height:1.3}
+
+/* ── SIDEBAR ── */
+.sidebar{border-left:.5px solid #e6ecf5;background:#f7f9ff}
+.live-box{background:#0a1c4a;padding:16px}
+.live-head{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.live-dot{width:8px;height:8px;border-radius:50%;background:#e8b00a;animation:pulse 1.5s infinite;flex-shrink:0}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.live-title{color:#fff;font-size:13px;font-weight:500}
+.live-event{color:#8aadd4;font-size:11px;margin-bottom:10px}
+.result-row{display:flex;align-items:center;gap:7px;padding:6px 0;border-bottom:.5px solid rgba(255,255,255,.08)}
+.result-row:last-child{border-bottom:none}
+.result-pos{color:#e8b00a;font-size:12px;font-weight:500;min-width:16px}
+.result-flag{font-size:12px}
+.result-name{color:#fff;font-size:11.5px;flex:1}
+.result-time{color:#7ec8f7;font-size:12px;font-weight:500;font-variant-numeric:tabular-nums}
+.result-new{background:#e8b00a;color:#0a1c4a;font-size:8px;font-weight:600;padding:1px 5px;border-radius:3px}
+.cal-side{padding:14px 16px}
+.cal-side-title{font-size:13px;font-weight:500;color:#0a1c4a;margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.cal-side-title::before{content:'';display:block;width:3px;height:14px;background:#e8b00a;border-radius:2px}
+.cal-item-s{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:.5px solid #e6ecf5}
+.cal-item-s:last-child{border-bottom:none}
+.cal-date-s{background:#0a1c4a;color:#fff;border-radius:5px;text-align:center;padding:4px 8px;min-width:36px;flex-shrink:0}
+.cal-d{font-size:13px;font-weight:500;line-height:1}
+.cal-m{font-size:9px;color:#7ec8f7;text-transform:uppercase;letter-spacing:.05em}
+.cal-name-s{font-size:11.5px;font-weight:500;color:#0a1c4a;line-height:1.2}
+.cal-loc-s{font-size:10.5px;color:#7a8aa0}
+
+/* ── STATS ── */
+.stats{background:#0a1c4a;display:grid;grid-template-columns:repeat(4,1fr);position:relative;overflow:hidden}
+.stats::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.04) 0px,rgba(255,255,255,.04) 1px,transparent 1px,transparent 60px)}
+.stat{padding:20px 0;text-align:center;position:relative;z-index:1;border-right:1px solid rgba(255,255,255,.08)}
+.stat:last-child{border-right:none}
+.stat-n{font-size:24px;font-weight:500;color:#e8b00a}
+.stat-l{font-size:10px;color:#7ec8f7;margin-top:2px}
+
+/* ── PARTNERS ── */
+.partners{padding:18px 22px;background:#f7f9ff;border-top:.5px solid #e6ecf5}
+.partners-label{font-size:10px;color:#7a8aa0;letter-spacing:.07em;text-transform:uppercase;margin-bottom:10px}
+.partners-logos{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.partner-logo{background:#0a1c4a;color:#7ec8f7;font-size:10px;font-weight:500;padding:5px 12px;border-radius:4px;letter-spacing:.04em}
+
+/* ── FOOTER ── */
+.footer{background:#060e28;display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:24px;padding:26px 22px}
+.footer h4{color:#fff;font-size:10.5px;font-weight:500;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+.footer a{display:block;color:#5a7a9a;font-size:11.5px;text-decoration:none;margin-bottom:5px}
+.footer a:hover{color:#bcd0ee}
+.footer-brand{color:#fff;font-size:13.5px;font-weight:500}
+.footer-sub{color:#7ec8f7;font-size:10px;margin-top:2px;margin-bottom:10px}
+.footer-addr{font-size:11px;color:#5a7a9a;line-height:1.7}
+.footer-social{display:flex;gap:7px;margin-top:12px}
+.soc-btn{background:rgba(255,255,255,.08);color:#bcd0ee;font-size:10px;font-weight:500;padding:5px 10px;border-radius:4px;text-decoration:none}
+.footer-bottom{background:#040c22;padding:10px 22px;display:flex;justify-content:space-between;align-items:center}
+.footer-bottom span{font-size:10px;color:#2a4060}
+.member-badge{background:rgba(255,255,255,.05);border:.5px solid rgba(255,255,255,.1);color:#5a7a9a;font-size:9px;padding:3px 8px;border-radius:3px;letter-spacing:.04em;margin-left:6px}
+</style>
+
+<div class="w">
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-logo">
+    <svg width="34" height="34" viewBox="0 0 38 38">
+      <circle cx="19" cy="19" r="17.5" stroke="#e8b00a" stroke-width="1.2" fill="none"/>
+      <path d="M6 20 Q10 14 14 18 Q18 22 22 16 Q26 10 32 15" stroke="#7ec8f7" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <path d="M6 25 Q10 19 14 23 Q18 27 22 21 Q26 15 32 20" stroke="rgba(255,255,255,.2)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <text x="19" y="13.5" text-anchor="middle" font-size="6.5" font-weight="600" fill="#e8b00a" font-family="sans-serif">PZP</text>
+    </svg>
+    <div class="nav-brand">Poland Aquatics<small>Polski Związek Pływacki</small></div>
+  </div>
+=======
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Poland Aquatics — Polski Związek Pływacki</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 100%; min-height: 100%; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #111;
+    background: #fff;
+  }
+
+  /* ── NAV ── */
+  .nav {
+    background: #0a1c4a;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    height: 58px;
+    gap: 20px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    text-decoration: none;
+  }
+  .nav-brand {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+  .nav-brand small {
+    display: block;
+    color: #7ec8f7;
+    font-size: 9px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  .nav-menu {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    gap: 2px;
+  }
+  .nav-menu a {
+    color: #bcd0ee;
+    font-size: 13px;
+    text-decoration: none;
+    padding: 5px 13px;
+    border-radius: 5px;
+    white-space: nowrap;
+    transition: background .15s, color .15s;
+  }
+  .nav-menu a:hover {
+    color: #fff;
+    background: rgba(255,255,255,.08);
+  }
+  .nav-btn {
+    background: #e8b00a;
+    color: #0a1c4a;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: background .15s;
+  }
+  .nav-btn:hover { background: #f5c420; }
+
+  /* ── HERO ── */
+  .hero {
+    background: #0a1c4a;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding: 64px 40px 0;
+    min-height: 380px;
+    display: flex;
+    align-items: flex-start;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 580px;
+    padding-bottom: 180px;
+  }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(232,176,10,.15);
+    border: 1px solid rgba(232,176,10,.4);
+    border-radius: 20px;
+    padding: 5px 14px;
+    margin-bottom: 20px;
+  }
+  .hero-badge-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #e8b00a;
+    flex-shrink: 0;
+  }
+  .hero-badge span {
+    color: #e8b00a;
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+  }
+  .hero-title {
+    color: #fff;
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 1.12;
+    margin-bottom: 16px;
+  }
+  .hero-title em {
+    color: #7ec8f7;
+    font-style: normal;
+    display: block;
+  }
+  .hero-sub {
+    color: #8aadd4;
+    font-size: 15px;
+    margin-bottom: 30px;
+    max-width: 460px;
+    line-height: 1.65;
+  }
+  .hero-btns { display: flex; gap: 12px; }
+  .btn-gold {
+    background: #e8b00a;
+    color: #0a1c4a;
+    font-size: 13.5px;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background .15s;
+  }
+  .btn-gold:hover { background: #f5c420; }
+  .btn-ghost {
+    border: 1.5px solid rgba(255,255,255,.35);
+    color: #fff;
+    font-size: 13.5px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: border-color .15s, background .15s;
+  }
+  .btn-ghost:hover { background: rgba(255,255,255,.07); }
+
+  /* pool lanes spanning full width */
+  .hero-pool {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    z-index: 1;
+  }
+
+  /* ── DISCIPLINES ── */
+  .disc-row {
+    background: #0d2260;
+    display: flex;
+    width: 100%;
+  }
+  .disc-pill {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 8px;
+    cursor: pointer;
+    border-right: 1px solid rgba(255,255,255,.08);
+    text-decoration: none;
+    transition: background .15s;
+  }
+  .disc-pill:last-child { border-right: none; }
+  .disc-pill:hover { background: rgba(255,255,255,.08); }
+  .disc-pill svg { width: 30px; height: 30px; margin-bottom: 7px; }
+  .disc-pill span {
+    color: #8aadd4;
+    font-size: 11px;
+    text-align: center;
+    line-height: 1.2;
+    transition: color .15s;
+  }
+  .disc-pill:hover span { color: #fff; }
+
+  /* ── TICKER ── */
+  .ticker {
+    background: #e8b00a;
+    padding: 8px 40px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    overflow: hidden;
+  }
+  .ticker-pill {
+    background: #0a1c4a;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 4px;
+    white-space: nowrap;
+    letter-spacing: .06em;
+    flex-shrink: 0;
+  }
+  .ticker-wrap { overflow: hidden; flex: 1; }
+  .ticker-text {
+    font-size: 13px;
+    color: #0a1c4a;
+    font-weight: 600;
+    white-space: nowrap;
+    display: inline-block;
+    animation: tickerScroll 34s linear infinite;
+  }
+  @keyframes tickerScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* ── MAIN LAYOUT ── */
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    width: 100%;
+    align-items: start;
+  }
+
+  /* ── NEWS ── */
+  .news-col { padding: 36px 32px; }
+  .sec-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 22px;
+  }
+  .sec-title {
+    font-size: 19px;
+    font-weight: 600;
+    color: #0a1c4a;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .sec-title::before {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 22px;
+    background: #e8b00a;
+    border-radius: 2px;
+  }
+  .sec-link {
+    font-size: 13px;
+    color: #1a3a7a;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .sec-link:hover { text-decoration: underline; }
+
+  .news-featured {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #dce6f7;
+    margin-bottom: 16px;
+  }
+  .news-feat-img {
+    height: 240px;
+    background: linear-gradient(135deg, #0d2260 0%, #1a4a9a 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .news-feat-tag {
+    background: #e8b00a;
+    color: #0a1c4a;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 11px;
+    border-radius: 5px;
+    align-self: flex-start;
+    position: relative;
+    z-index: 2;
+  }
+  .feat-wave {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    opacity: .22;
+  }
+  .news-feat-body { padding: 18px 20px; }
+  .news-feat-date { font-size: 12px; color: #7a8aa0; margin-bottom: 6px; }
+  .news-feat-title {
+    font-size: 17px;
+    font-weight: 600;
+    color: #0a1c4a;
+    line-height: 1.35;
+  }
+
+  .news-small-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  .news-sm {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #dce6f7;
+    transition: box-shadow .15s;
+  }
+  .news-sm:hover { box-shadow: 0 4px 16px rgba(10,28,74,.1); }
+  .news-sm-img {
+    height: 100px;
+    display: flex;
+    align-items: flex-end;
+    padding: 10px;
+  }
+  .nsi-a { background: linear-gradient(135deg, #0b3d7a, #0d2260); }
+  .nsi-b { background: linear-gradient(135deg, #0a4d5e, #062030); }
+  .nsi-c { background: linear-gradient(135deg, #3a1c7a, #1c0d4a); }
+  .nsi-d { background: linear-gradient(135deg, #0a5e3a, #063d25); }
+  .news-sm-tag {
+    background: rgba(255,255,255,.22);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 3px;
+  }
+  .news-sm-body { padding: 12px; }
+  .news-sm-date { font-size: 11px; color: #7a8aa0; margin-bottom: 4px; }
+  .news-sm-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #0a1c4a;
+    line-height: 1.35;
+  }
+
+  /* ── SIDEBAR ── */
+  .sidebar {
+    border-left: 1px solid #e6ecf5;
+    background: #f5f8ff;
+    min-height: 100%;
+  }
+
+  .live-box { background: #0a1c4a; padding: 22px; }
+  .live-head {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 12px;
+  }
+  .live-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #e8b00a;
+    animation: pulse 1.5s infinite;
+    flex-shrink: 0;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: .35; }
+  }
+  .live-title { color: #fff; font-size: 14px; font-weight: 600; }
+  .live-event { color: #8aadd4; font-size: 12px; margin-bottom: 14px; }
+  .result-row {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255,255,255,.07);
+  }
+  .result-row:last-child { border-bottom: none; }
+  .result-pos { color: #e8b00a; font-size: 13px; font-weight: 700; min-width: 18px; }
+  .result-flag { font-size: 15px; }
+  .result-name { color: #fff; font-size: 13px; flex: 1; }
+  .result-time {
+    color: #7ec8f7;
+    font-size: 13px;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+  }
+  .result-new {
+    background: #e8b00a;
+    color: #0a1c4a;
+    font-size: 8px;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 3px;
+  }
+
+  .cal-side { padding: 20px 22px; }
+  .cal-side-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #0a1c4a;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .cal-side-title::before {
+    content: '';
+    display: block;
+    width: 3px;
+    height: 16px;
+    background: #e8b00a;
+    border-radius: 2px;
+  }
+  .cal-item-s {
+    display: flex;
+    gap: 13px;
+    align-items: flex-start;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e8f5;
+  }
+  .cal-item-s:last-child { border-bottom: none; }
+  .cal-date-s {
+    background: #0a1c4a;
+    color: #fff;
+    border-radius: 6px;
+    text-align: center;
+    padding: 6px 10px;
+    min-width: 44px;
+    flex-shrink: 0;
+  }
+  .cal-d { font-size: 16px; font-weight: 700; line-height: 1; }
+  .cal-m {
+    font-size: 9px;
+    color: #7ec8f7;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    margin-top: 1px;
+  }
+  .cal-name-s { font-size: 13px; font-weight: 600; color: #0a1c4a; line-height: 1.25; }
+  .cal-loc-s { font-size: 11.5px; color: #7a8aa0; margin-top: 2px; }
+
+  /* ── STATS ── */
+  .stats {
+    background: #0a1c4a;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  .stats::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(
+      90deg,
+      rgba(255,255,255,.04) 0,
+      rgba(255,255,255,.04) 1px,
+      transparent 1px,
+      transparent 80px
+    );
+  }
+  .stat {
+    padding: 28px 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    border-right: 1px solid rgba(255,255,255,.1);
+  }
+  .stat:last-child { border-right: none; }
+  .stat-n { font-size: 32px; font-weight: 700; color: #e8b00a; }
+  .stat-l { font-size: 11px; color: #7ec8f7; margin-top: 4px; }
+
+  /* ── PARTNERS ── */
+  .partners {
+    padding: 24px 40px;
+    background: #f5f8ff;
+    border-top: 1px solid #e0e8f5;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    flex-wrap: wrap;
+  }
+  .partners-label {
+    font-size: 10px;
+    color: #9aabb8;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    font-weight: 600;
+  }
+  .partners-logos { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  .partner-logo {
+    background: #0a1c4a;
+    color: #7ec8f7;
+    font-size: 10.5px;
+    font-weight: 600;
+    padding: 7px 16px;
+    border-radius: 5px;
+    letter-spacing: .04em;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: #060e28;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 32px;
+    padding: 44px 40px;
+    width: 100%;
+  }
+  .footer h4 {
+    color: #fff;
+    font-size: 10.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    margin-bottom: 14px;
+  }
+  .footer a {
+    display: block;
+    color: #4a6a8a;
+    font-size: 12.5px;
+    text-decoration: none;
+    margin-bottom: 7px;
+    transition: color .15s;
+  }
+  .footer a:hover { color: #bcd0ee; }
+  .footer-brand { color: #fff; font-size: 16px; font-weight: 700; }
+  .footer-sub { color: #7ec8f7; font-size: 10.5px; margin-top: 3px; margin-bottom: 16px; }
+  .footer-addr { font-size: 12px; color: #4a6a8a; line-height: 1.85; }
+  .footer-social { display: flex; gap: 8px; margin-top: 18px; }
+  .soc-btn {
+    background: rgba(255,255,255,.08);
+    color: #bcd0ee;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 6px 13px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background .15s;
+  }
+  .soc-btn:hover { background: rgba(255,255,255,.14); }
+
+  .footer-bottom {
+    background: #040c22;
+    padding: 13px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .footer-bottom-left { font-size: 11px; color: #28405a; }
+  .member-badges { display: flex; gap: 8px; }
+  .member-badge {
+    background: rgba(255,255,255,.04);
+    border: 1px solid rgba(255,255,255,.09);
+    color: #4a6a8a;
+    font-size: 9.5px;
+    padding: 3px 11px;
+    border-radius: 4px;
+    letter-spacing: .04em;
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="#" class="nav-logo">
+    <svg width="38" height="38" viewBox="0 0 38 38">
+      <circle cx="19" cy="19" r="17.5" stroke="#e8b00a" stroke-width="1.3" fill="none"/>
+      <path d="M6 20 Q10 14 14 18 Q18 22 22 16 Q26 10 32 15" stroke="#7ec8f7" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+      <path d="M6 25 Q10 19 14 23 Q18 27 22 21 Q26 15 32 20" stroke="rgba(255,255,255,.22)" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+      <text x="19" y="13.5" text-anchor="middle" font-size="7" font-weight="700" fill="#e8b00a" font-family="sans-serif">PZP</text>
+    </svg>
+    <div class="nav-brand">Poland Aquatics<small>Polski Związek Pływacki</small></div>
+  </a>
+>>>>>>> b302503 (Pierwszy commit z terminala)
+  <div class="nav-menu">
+    <a href="#">Aktualności</a>
+    <a href="#">Zawody</a>
+    <a href="#">Kadra</a>
+    <a href="#">Dyscypliny</a>
+    <a href="#">O związku</a>
+    <a href="#">Media</a>
+  </div>
+  <a href="#" class="nav-btn">Licencje &amp; rejestracja</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+<<<<<<< HEAD
+  <svg class="lanes-pool" viewBox="0 0 680 180" preserveAspectRatio="none">
+    <rect x="0" y="0" width="680" height="180" fill="url(#poolGrad)"/>
+    <defs>
+      <linearGradient id="poolGrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#0a1c4a" stop-opacity="0"/>
+        <stop offset="100%" stop-color="#0d2a6e" stop-opacity="0.6"/>
+      </linearGradient>
+    </defs>
+    <line x1="0" y1="36" x2="680" y2="36" stroke="rgba(126,200,247,.25)" stroke-width=".8" stroke-dasharray="8,4"/>
+    <line x1="0" y1="72" x2="680" y2="72" stroke="rgba(126,200,247,.25)" stroke-width=".8" stroke-dasharray="8,4"/>
+    <line x1="0" y1="108" x2="680" y2="108" stroke="rgba(126,200,247,.25)" stroke-width=".8" stroke-dasharray="8,4"/>
+    <line x1="0" y1="144" x2="680" y2="144" stroke="rgba(126,200,247,.25)" stroke-width=".8" stroke-dasharray="8,4"/>
+    <g opacity=".35">
+      <circle cx="40" cy="36" r="4" fill="#e8b00a"/><circle cx="80" cy="36" r="4" fill="#e8b00a"/><circle cx="120" cy="36" r="4" fill="#e8b00a"/><circle cx="160" cy="36" r="4" fill="#e8b00a"/><circle cx="200" cy="36" r="4" fill="#e8b00a"/><circle cx="240" cy="36" r="4" fill="#e8b00a"/><circle cx="280" cy="36" r="4" fill="#e8b00a"/><circle cx="320" cy="36" r="4" fill="#e8b00a"/><circle cx="360" cy="36" r="4" fill="#e8b00a"/><circle cx="400" cy="36" r="4" fill="#e8b00a"/><circle cx="440" cy="36" r="4" fill="#e8b00a"/><circle cx="480" cy="36" r="4" fill="#e8b00a"/><circle cx="520" cy="36" r="4" fill="#e8b00a"/><circle cx="560" cy="36" r="4" fill="#e8b00a"/><circle cx="600" cy="36" r="4" fill="#e8b00a"/><circle cx="640" cy="36" r="4" fill="#e8b00a"/>
+      <circle cx="40" cy="72" r="4" fill="#e8b00a"/><circle cx="80" cy="72" r="4" fill="#e8b00a"/><circle cx="120" cy="72" r="4" fill="#e8b00a"/><circle cx="160" cy="72" r="4" fill="#e8b00a"/><circle cx="200" cy="72" r="4" fill="#e8b00a"/><circle cx="240" cy="72" r="4" fill="#e8b00a"/><circle cx="280" cy="72" r="4" fill="#e8b00a"/><circle cx="320" cy="72" r="4" fill="#e8b00a"/><circle cx="360" cy="72" r="4" fill="#e8b00a"/><circle cx="400" cy="72" r="4" fill="#e8b00a"/><circle cx="440" cy="72" r="4" fill="#e8b00a"/><circle cx="480" cy="72" r="4" fill="#e8b00a"/><circle cx="520" cy="72" r="4" fill="#e8b00a"/><circle cx="560" cy="72" r="4" fill="#e8b00a"/><circle cx="600" cy="72" r="4" fill="#e8b00a"/><circle cx="640" cy="72" r="4" fill="#e8b00a"/>
+      <circle cx="40" cy="108" r="4" fill="#e8b00a"/><circle cx="80" cy="108" r="4" fill="#e8b00a"/><circle cx="120" cy="108" r="4" fill="#e8b00a"/><circle cx="160" cy="108" r="4" fill="#e8b00a"/><circle cx="200" cy="108" r="4" fill="#e8b00a"/><circle cx="240" cy="108" r="4" fill="#e8b00a"/><circle cx="280" cy="108" r="4" fill="#e8b00a"/><circle cx="320" cy="108" r="4" fill="#e8b00a"/><circle cx="360" cy="108" r="4" fill="#e8b00a"/><circle cx="400" cy="108" r="4" fill="#e8b00a"/><circle cx="440" cy="108" r="4" fill="#e8b00a"/><circle cx="480" cy="108" r="4" fill="#e8b00a"/><circle cx="520" cy="108" r="4" fill="#e8b00a"/><circle cx="560" cy="108" r="4" fill="#e8b00a"/><circle cx="600" cy="108" r="4" fill="#e8b00a"/><circle cx="640" cy="108" r="4" fill="#e8b00a"/>
+      <circle cx="40" cy="144" r="4" fill="#7ec8f7"/><circle cx="80" cy="144" r="4" fill="#7ec8f7"/><circle cx="120" cy="144" r="4" fill="#7ec8f7"/><circle cx="160" cy="144" r="4" fill="#7ec8f7"/><circle cx="200" cy="144" r="4" fill="#7ec8f7"/><circle cx="240" cy="144" r="4" fill="#7ec8f7"/><circle cx="280" cy="144" r="4" fill="#7ec8f7"/><circle cx="320" cy="144" r="4" fill="#7ec8f7"/><circle cx="360" cy="144" r="4" fill="#7ec8f7"/><circle cx="400" cy="144" r="4" fill="#7ec8f7"/><circle cx="440" cy="144" r="4" fill="#7ec8f7"/><circle cx="480" cy="144" r="4" fill="#7ec8f7"/><circle cx="520" cy="144" r="4" fill="#7ec8f7"/><circle cx="560" cy="144" r="4" fill="#7ec8f7"/><circle cx="600" cy="144" r="4" fill="#7ec8f7"/><circle cx="640" cy="144" r="4" fill="#7ec8f7"/>
+    </g>
+    <g transform="translate(420,58)" opacity=".18">
+      <ellipse cx="0" cy="0" rx="28" ry="8" fill="#7ec8f7" transform="rotate(-8)"/>
+      <circle cx="-24" cy="-4" r="7" fill="#7ec8f7"/>
+      <path d="M-18 -2 Q0 -14 20 -6 Q30 -2 36 4" stroke="#7ec8f7" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <path d="M-10 6 Q4 14 24 8" stroke="#7ec8f7" stroke-width="4" fill="none" stroke-linecap="round" opacity=".6"/>
+    </g>
+    <path d="M0 160 Q85 140 170 158 Q255 176 340 158 Q425 140 510 158 Q595 176 680 160 L680 180 L0 180Z" fill="rgba(13,34,96,.8)"/>
+  </svg>
+  <div class="hero-content">
+    <div class="hero-badge"><div class="hero-badge-dot"></div><span>Member — World Aquatics &amp; European Aquatics</span></div>
+    <h1 class="hero-title">Polska pływa.<br><em>Razem płyniemy dalej.</em></h1>
+=======
+  <svg class="hero-pool" viewBox="0 0 1440 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="pg" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#0a1c4a" stop-opacity="0"/>
+        <stop offset="100%" stop-color="#0c2470" stop-opacity="0.75"/>
+      </linearGradient>
+    </defs>
+    <rect width="1440" height="200" fill="url(#pg)"/>
+    <!-- lane ropes -->
+    <line x1="0" y1="40" x2="1440" y2="40" stroke="rgba(126,200,247,.22)" stroke-width="1" stroke-dasharray="12,6"/>
+    <line x1="0" y1="80" x2="1440" y2="80" stroke="rgba(126,200,247,.22)" stroke-width="1" stroke-dasharray="12,6"/>
+    <line x1="0" y1="120" x2="1440" y2="120" stroke="rgba(126,200,247,.22)" stroke-width="1" stroke-dasharray="12,6"/>
+    <line x1="0" y1="160" x2="1440" y2="160" stroke="rgba(126,200,247,.22)" stroke-width="1" stroke-dasharray="12,6"/>
+    <!-- buoys -->
+    <g fill="#e8b00a" opacity=".28">
+      <circle cx="72" cy="40" r="4.5"/><circle cx="144" cy="40" r="4.5"/><circle cx="216" cy="40" r="4.5"/><circle cx="288" cy="40" r="4.5"/><circle cx="360" cy="40" r="4.5"/><circle cx="432" cy="40" r="4.5"/><circle cx="504" cy="40" r="4.5"/><circle cx="576" cy="40" r="4.5"/><circle cx="648" cy="40" r="4.5"/><circle cx="720" cy="40" r="4.5"/><circle cx="792" cy="40" r="4.5"/><circle cx="864" cy="40" r="4.5"/><circle cx="936" cy="40" r="4.5"/><circle cx="1008" cy="40" r="4.5"/><circle cx="1080" cy="40" r="4.5"/><circle cx="1152" cy="40" r="4.5"/><circle cx="1224" cy="40" r="4.5"/><circle cx="1296" cy="40" r="4.5"/><circle cx="1368" cy="40" r="4.5"/>
+      <circle cx="72" cy="80" r="4.5"/><circle cx="144" cy="80" r="4.5"/><circle cx="216" cy="80" r="4.5"/><circle cx="288" cy="80" r="4.5"/><circle cx="360" cy="80" r="4.5"/><circle cx="432" cy="80" r="4.5"/><circle cx="504" cy="80" r="4.5"/><circle cx="576" cy="80" r="4.5"/><circle cx="648" cy="80" r="4.5"/><circle cx="720" cy="80" r="4.5"/><circle cx="792" cy="80" r="4.5"/><circle cx="864" cy="80" r="4.5"/><circle cx="936" cy="80" r="4.5"/><circle cx="1008" cy="80" r="4.5"/><circle cx="1080" cy="80" r="4.5"/><circle cx="1152" cy="80" r="4.5"/><circle cx="1224" cy="80" r="4.5"/><circle cx="1296" cy="80" r="4.5"/><circle cx="1368" cy="80" r="4.5"/>
+      <circle cx="72" cy="120" r="4.5"/><circle cx="144" cy="120" r="4.5"/><circle cx="216" cy="120" r="4.5"/><circle cx="288" cy="120" r="4.5"/><circle cx="360" cy="120" r="4.5"/><circle cx="432" cy="120" r="4.5"/><circle cx="504" cy="120" r="4.5"/><circle cx="576" cy="120" r="4.5"/><circle cx="648" cy="120" r="4.5"/><circle cx="720" cy="120" r="4.5"/><circle cx="792" cy="120" r="4.5"/><circle cx="864" cy="120" r="4.5"/><circle cx="936" cy="120" r="4.5"/><circle cx="1008" cy="120" r="4.5"/><circle cx="1080" cy="120" r="4.5"/><circle cx="1152" cy="120" r="4.5"/><circle cx="1224" cy="120" r="4.5"/><circle cx="1296" cy="120" r="4.5"/><circle cx="1368" cy="120" r="4.5"/>
+    </g>
+    <g fill="#7ec8f7" opacity=".25">
+      <circle cx="72" cy="160" r="4.5"/><circle cx="144" cy="160" r="4.5"/><circle cx="216" cy="160" r="4.5"/><circle cx="288" cy="160" r="4.5"/><circle cx="360" cy="160" r="4.5"/><circle cx="432" cy="160" r="4.5"/><circle cx="504" cy="160" r="4.5"/><circle cx="576" cy="160" r="4.5"/><circle cx="648" cy="160" r="4.5"/><circle cx="720" cy="160" r="4.5"/><circle cx="792" cy="160" r="4.5"/><circle cx="864" cy="160" r="4.5"/><circle cx="936" cy="160" r="4.5"/><circle cx="1008" cy="160" r="4.5"/><circle cx="1080" cy="160" r="4.5"/><circle cx="1152" cy="160" r="4.5"/><circle cx="1224" cy="160" r="4.5"/><circle cx="1296" cy="160" r="4.5"/><circle cx="1368" cy="160" r="4.5"/>
+    </g>
+    <!-- swimmer silhouette right -->
+    <g transform="translate(1100, 65)" opacity=".14">
+      <ellipse cx="0" cy="0" rx="46" ry="11" fill="#7ec8f7" transform="rotate(-5)"/>
+      <circle cx="-40" cy="-5" r="12" fill="#7ec8f7"/>
+      <path d="M-30 -4 Q0 -24 36 -9 Q52 -3 60 7" stroke="#7ec8f7" stroke-width="9" fill="none" stroke-linecap="round"/>
+      <path d="M-18 10 Q8 24 44 15" stroke="#7ec8f7" stroke-width="6" fill="none" stroke-linecap="round" opacity=".5"/>
+    </g>
+    <!-- bottom wave -->
+    <path d="M0 172 Q180 150 360 170 Q540 190 720 170 Q900 150 1080 170 Q1260 190 1440 172 L1440 200 L0 200Z" fill="rgba(10,28,74,.88)"/>
+  </svg>
+
+  <div class="hero-content">
+    <div class="hero-badge">
+      <div class="hero-badge-dot"></div>
+      <span>Member — World Aquatics &amp; European Aquatics</span>
+    </div>
+    <h1 class="hero-title">
+      Polska pływa.
+      <em>Razem płyniemy dalej.</em>
+    </h1>
+>>>>>>> b302503 (Pierwszy commit z terminala)
+    <p class="hero-sub">Oficjalny portal Polskiego Związku Pływackiego — aktualności, wyniki, kadra i kalendarz zawodów.</p>
+    <div class="hero-btns">
+      <a href="#" class="btn-gold">Wyniki na żywo</a>
+      <a href="#" class="btn-ghost">Kalendarz 2025</a>
+    </div>
+  </div>
+</div>
+
+<!-- DISCIPLINES -->
+<div class="disc-row">
+<<<<<<< HEAD
+  <div class="disc-pill">
+    <svg viewBox="0 0 28 28" fill="none"><circle cx="10" cy="9" r="3" fill="#7ec8f7"/><path d="M2 18 Q7 12 12 16 Q17 20 22 14 Q25 10 26 12" stroke="#7ec8f7" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M2 22 Q7 16 12 20 Q17 24 22 18 Q25 14 26 16" stroke="rgba(126,200,247,.4)" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+    <span>Pływanie</span>
+  </div>
+  <div class="disc-pill">
+    <svg viewBox="0 0 28 28" fill="none"><path d="M2 12 Q7 6 12 10 Q17 14 22 8 Q25 4 26 6" stroke="#7ec8f7" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M2 18 Q7 12 12 16 Q17 20 22 14 Q25 10 26 12" stroke="#7ec8f7" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M2 24 Q7 18 12 22 Q17 26 22 20 Q25 16 26 18" stroke="rgba(126,200,247,.4)" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+    <span>Wody otwarte</span>
+  </div>
+  <div class="disc-pill">
+    <svg viewBox="0 0 28 28" fill="none"><circle cx="14" cy="13" r="7" stroke="#7ec8f7" stroke-width="1.8"/><path d="M9 8 Q14 13 19 8" stroke="#7ec8f7" stroke-width="1.2" fill="none"/><path d="M7 15 Q14 20 21 15" stroke="#7ec8f7" stroke-width="1.2" fill="none"/><line x1="14" y1="6" x2="14" y2="20" stroke="#7ec8f7" stroke-width="1.2"/></svg>
+    <span>Piłka wodna</span>
+  </div>
+  <div class="disc-pill">
+    <svg viewBox="0 0 28 28" fill="none"><circle cx="14" cy="7" r="3" fill="#7ec8f7"/><path d="M14 10 L12 18 L8 22" stroke="#7ec8f7" stroke-width="1.8" stroke-linecap="round"/><path d="M14 10 L16 15" stroke="#7ec8f7" stroke-width="1.8" stroke-linecap="round"/><line x1="4" y1="26" x2="24" y2="26" stroke="rgba(126,200,247,.5)" stroke-width="1.5" stroke-linecap="round"/></svg>
+    <span>Skoki do wody</span>
+  </div>
+  <div class="disc-pill">
+    <svg viewBox="0 0 28 28" fill="none"><circle cx="14" cy="8" r="3" fill="#7ec8f7"/><path d="M11 11 Q8 16 10 20" stroke="#7ec8f7" stroke-width="1.8" stroke-linecap="round"/><path d="M17 11 Q20 16 18 20" stroke="#7ec8f7" stroke-width="1.8" stroke-linecap="round"/><path d="M10 20 Q14 24 18 20" stroke="#7ec8f7" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
+    <span>Pł. artystyczne</span>
+  </div>
+  <div class="disc-pill">
+    <svg viewBox="0 0 28 28" fill="none"><path d="M14 4 L16 10 L22 10 L17.5 14 L19.5 20 L14 16.5 L8.5 20 L10.5 14 L6 10 L12 10Z" stroke="#7ec8f7" stroke-width="1.6" fill="none" stroke-linejoin="round"/></svg>
+    <span>Masters</span>
+  </div>
+=======
+  <a href="#" class="disc-pill">
+    <svg viewBox="0 0 30 30" fill="none">
+      <circle cx="10" cy="9" r="3.5" fill="#7ec8f7"/>
+      <path d="M2 19 Q8 12 13 17 Q18 22 23 15 Q26 10 28 13" stroke="#7ec8f7" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+      <path d="M2 24 Q8 17 13 22 Q18 27 23 20 Q26 15 28 18" stroke="rgba(126,200,247,.4)" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+    </svg>
+    <span>Pływanie</span>
+  </a>
+  <a href="#" class="disc-pill">
+    <svg viewBox="0 0 30 30" fill="none">
+      <path d="M2 11 Q8 5 13 10 Q18 15 23 8 Q26 4 28 6" stroke="#7ec8f7" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+      <path d="M2 18 Q8 12 13 17 Q18 22 23 15 Q26 10 28 13" stroke="#7ec8f7" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+      <path d="M2 25 Q8 19 13 24 Q18 29 23 22 Q26 17 28 20" stroke="rgba(126,200,247,.4)" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+    </svg>
+    <span>Wody otwarte</span>
+  </a>
+  <a href="#" class="disc-pill">
+    <svg viewBox="0 0 30 30" fill="none">
+      <circle cx="15" cy="13" r="8" stroke="#7ec8f7" stroke-width="1.8"/>
+      <path d="M9 7 Q15 13 21 7" stroke="#7ec8f7" stroke-width="1.3" fill="none"/>
+      <path d="M7 16 Q15 22 23 16" stroke="#7ec8f7" stroke-width="1.3" fill="none"/>
+      <line x1="15" y1="5" x2="15" y2="21" stroke="#7ec8f7" stroke-width="1.3"/>
+    </svg>
+    <span>Piłka wodna</span>
+  </a>
+  <a href="#" class="disc-pill">
+    <svg viewBox="0 0 30 30" fill="none">
+      <circle cx="15" cy="7" r="3.5" fill="#7ec8f7"/>
+      <path d="M15 11 L13 20 L8 25" stroke="#7ec8f7" stroke-width="2" stroke-linecap="round"/>
+      <path d="M15 11 L17 17" stroke="#7ec8f7" stroke-width="2" stroke-linecap="round"/>
+      <line x1="4" y1="28" x2="26" y2="28" stroke="rgba(126,200,247,.5)" stroke-width="1.8" stroke-linecap="round"/>
+    </svg>
+    <span>Skoki do wody</span>
+  </a>
+  <a href="#" class="disc-pill">
+    <svg viewBox="0 0 30 30" fill="none">
+      <circle cx="15" cy="8" r="3.5" fill="#7ec8f7"/>
+      <path d="M12 12 Q8 17 10 22" stroke="#7ec8f7" stroke-width="2" stroke-linecap="round"/>
+      <path d="M18 12 Q22 17 20 22" stroke="#7ec8f7" stroke-width="2" stroke-linecap="round"/>
+      <path d="M10 22 Q15 27 20 22" stroke="#7ec8f7" stroke-width="2" fill="none" stroke-linecap="round"/>
+    </svg>
+    <span>Pł. artystyczne</span>
+  </a>
+  <a href="#" class="disc-pill">
+    <svg viewBox="0 0 30 30" fill="none">
+      <path d="M15 3 L17.5 10.5 L25 10.5 L19 15 L21.5 22.5 L15 18 L8.5 22.5 L11 15 L5 10.5 L12.5 10.5Z" stroke="#7ec8f7" stroke-width="1.7" fill="none" stroke-linejoin="round"/>
+    </svg>
+    <span>Masters</span>
+  </a>
+>>>>>>> b302503 (Pierwszy commit z terminala)
+</div>
+
+<!-- TICKER -->
+<div class="ticker">
+  <span class="ticker-pill">LIVE</span>
+  <div class="ticker-wrap">
+<<<<<<< HEAD
+    <span class="ticker-text">MP OPEN Olsztyn — Wasick złoto 50m dow. najszybsza Europejka &nbsp;•&nbsp; Masiuk srebro 100m grzbiet &nbsp;•&nbsp; Rekord Polski AZS AWF Katowice 4×100m 3:18.83 &nbsp;•&nbsp; Kowalska-Frączyk złoto 50m grzbiet &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MP OPEN Olsztyn — Wasick złoto 50m dow. najszybsza Europejka &nbsp;•&nbsp; Masiuk srebro 100m grzbiet &nbsp;•&nbsp; Rekord Polski AZS AWF Katowice 4×100m 3:18.83 &nbsp;•&nbsp; Kowalska-Frączyk złoto 50m grzbiet</span>
+=======
+    <span class="ticker-text">
+      MP OPEN Olsztyn — Wasick złoto 50m dow. najszybsza Europejka &nbsp;•&nbsp;
+      Masiuk srebro 100m grzbiet &nbsp;•&nbsp;
+      Rekord Polski AZS AWF Katowice 4×100m 3:18.83 &nbsp;•&nbsp;
+      Kowalska-Frączyk złoto 50m grzbiet &nbsp;•&nbsp;
+      Mazurkiewicz srebro 100m klasyk Sztokholm 1:07.15 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      MP OPEN Olsztyn — Wasick złoto 50m dow. najszybsza Europejka &nbsp;•&nbsp;
+      Masiuk srebro 100m grzbiet &nbsp;•&nbsp;
+      Rekord Polski AZS AWF Katowice 4×100m 3:18.83 &nbsp;•&nbsp;
+      Kowalska-Frączyk złoto 50m grzbiet &nbsp;•&nbsp;
+      Mazurkiewicz srebro 100m klasyk Sztokholm 1:07.15
+    </span>
+>>>>>>> b302503 (Pierwszy commit z terminala)
+  </div>
+</div>
+
+<!-- MAIN GRID -->
+<div class="main">
+<<<<<<< HEAD
+=======
+
+  <!-- NEWS COLUMN -->
+>>>>>>> b302503 (Pierwszy commit z terminala)
+  <div class="news-col">
+    <div class="sec-head">
+      <div class="sec-title">Aktualności</div>
+      <a href="#" class="sec-link">Wszystkie newsy →</a>
+    </div>
+<<<<<<< HEAD
+    <div class="news-featured">
+      <div class="news-feat-img">
+        <span class="news-feat-tag">Mistrzostwa Polski</span>
+        <svg viewBox="0 0 200 50" width="200" height="50" style="opacity:.2;align-self:flex-end">
+          <path d="M0 25 Q25 10 50 25 Q75 40 100 25 Q125 10 150 25 Q175 40 200 25" stroke="white" stroke-width="2" fill="none"/>
+          <path d="M0 38 Q25 23 50 38 Q75 53 100 38 Q125 23 150 38 Q175 53 200 38" stroke="white" stroke-width="1.2" fill="none" opacity=".5"/>
+=======
+
+    <div class="news-featured">
+      <div class="news-feat-img">
+        <span class="news-feat-tag">Mistrzostwa Polski</span>
+        <svg class="feat-wave" viewBox="0 0 1000 65" preserveAspectRatio="none" height="65">
+          <path d="M0 32 Q125 10 250 32 Q375 54 500 32 Q625 10 750 32 Q875 54 1000 32" stroke="white" stroke-width="2.5" fill="none"/>
+          <path d="M0 50 Q125 28 250 50 Q375 72 500 50 Q625 28 750 50 Q875 72 1000 50" stroke="white" stroke-width="1.5" fill="none" opacity=".4"/>
+>>>>>>> b302503 (Pierwszy commit z terminala)
+        </svg>
+      </div>
+      <div class="news-feat-body">
+        <div class="news-feat-date">28 kwietnia 2026</div>
+        <div class="news-feat-title">MP OPEN Olsztyn: Wasick najszybszą Europejką na 50m dowolnym, sztafeta bije rekord Polski wynikiem 3:18.83</div>
+      </div>
+    </div>
+<<<<<<< HEAD
+    <div class="news-small-grid">
+      <div class="news-sm"><div class="news-sm-img nsi-a"><span class="news-sm-tag">Wody otwarte</span></div><div class="news-sm-body"><div class="news-sm-date">21 kwi 2026</div><div class="news-sm-title">Puchar Świata — Ibiza &amp; Golfo Aranci</div></div></div>
+      <div class="news-sm"><div class="news-sm-img nsi-b"><span class="news-sm-tag">Kadra</span></div><div class="news-sm-body"><div class="news-sm-date">18 kwi 2026</div><div class="news-sm-title">18 medali Swim Open Sztokholm</div></div></div>
+      <div class="news-sm"><div class="news-sm-img nsi-c"><span class="news-sm-tag">Kadra juniorów</span></div><div class="news-sm-body"><div class="news-sm-date">15 kwi 2026</div><div class="news-sm-title">Kowalska-Frączyk — nowa gwiazda</div></div></div>
+      <div class="news-sm"><div class="news-sm-img nsi-d"><span class="news-sm-tag">Piłka wodna</span></div><div class="news-sm-body"><div class="news-sm-date">10 kwi 2026</div><div class="news-sm-title">Polska — Malta 19:10 w PŚ</div></div></div>
+    </div>
+  </div>
+
+  <div class="sidebar">
+    <div class="live-box">
+      <div class="live-head"><div class="live-dot"></div><div class="live-title">Wyniki na żywo</div></div>
+      <div class="live-event">MP OPEN Olsztyn — 50m dow. K finał</div>
+      <div class="result-row"><span class="result-pos">1</span><span class="result-flag">🇵🇱</span><span class="result-name">K. Wasick</span><span class="result-time">23.84</span><span class="result-new">EU</span></div>
+      <div class="result-row"><span class="result-pos">2</span><span class="result-flag">🇵🇱</span><span class="result-name">M. Kubiak</span><span class="result-time">24.31</span></div>
+      <div class="result-row"><span class="result-pos">3</span><span class="result-flag">🇵🇱</span><span class="result-name">A. Piskorska</span><span class="result-time">24.58</span></div>
+      <div class="result-row"><span class="result-pos">4</span><span class="result-flag">🇵🇱</span><span class="result-name">Z. Kowalska-F.</span><span class="result-time">24.71</span></div>
+    </div>
+    <div class="cal-side">
+      <div class="cal-side-title">Najbliższe zawody</div>
+      <div class="cal-item-s"><div class="cal-date-s"><div class="cal-d">01</div><div class="cal-m">maj</div></div><div><div class="cal-name-s">PŚ wody otwarte</div><div class="cal-loc-s">Golfo Aranci, ITA</div></div></div>
+      <div class="cal-item-s"><div class="cal-date-s"><div class="cal-d">10</div><div class="cal-m">maj</div></div><div><div class="cal-name-s">Grand Prix PP — ed. 1</div><div class="cal-loc-s">Warszawa</div></div></div>
+      <div class="cal-item-s"><div class="cal-date-s"><div class="cal-d">14</div><div class="cal-m">cze</div></div><div><div class="cal-name-s">ME Juniorów</div><div class="cal-loc-s">Belgrad, SRB</div></div></div>
+      <div class="cal-item-s"><div class="cal-date-s"><div class="cal-d">sie</div><div class="cal-m">2026</div></div><div><div class="cal-name-s">ME Senior — Paryż</div><div class="cal-loc-s">Paryż, FRA</div></div></div>
+    </div>
+  </div>
+</div>
+=======
+
+    <div class="news-small-grid">
+      <div class="news-sm">
+        <div class="news-sm-img nsi-a"><span class="news-sm-tag">Wody otwarte</span></div>
+        <div class="news-sm-body">
+          <div class="news-sm-date">21 kwi 2026</div>
+          <div class="news-sm-title">Puchar Świata — Ibiza &amp; Golfo Aranci</div>
+        </div>
+      </div>
+      <div class="news-sm">
+        <div class="news-sm-img nsi-b"><span class="news-sm-tag">Kadra</span></div>
+        <div class="news-sm-body">
+          <div class="news-sm-date">18 kwi 2026</div>
+          <div class="news-sm-title">18 medali Swim Open Sztokholm</div>
+        </div>
+      </div>
+      <div class="news-sm">
+        <div class="news-sm-img nsi-c"><span class="news-sm-tag">Kadra juniorów</span></div>
+        <div class="news-sm-body">
+          <div class="news-sm-date">15 kwi 2026</div>
+          <div class="news-sm-title">Kowalska-Frączyk — nowa gwiazda polskiego pływania</div>
+        </div>
+      </div>
+      <div class="news-sm">
+        <div class="news-sm-img nsi-d"><span class="news-sm-tag">Piłka wodna</span></div>
+        <div class="news-sm-body">
+          <div class="news-sm-date">10 kwi 2026</div>
+          <div class="news-sm-title">Polska — Malta 19:10 w PŚ na Malcie</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <div class="live-box">
+      <div class="live-head">
+        <div class="live-dot"></div>
+        <div class="live-title">Wyniki na żywo</div>
+      </div>
+      <div class="live-event">MP OPEN Olsztyn — 50m dow. K finał</div>
+      <div class="result-row">
+        <span class="result-pos">1</span>
+        <span class="result-flag">🇵🇱</span>
+        <span class="result-name">K. Wasick</span>
+        <span class="result-time">23.84</span>
+        <span class="result-new">EU</span>
+      </div>
+      <div class="result-row">
+        <span class="result-pos">2</span>
+        <span class="result-flag">🇵🇱</span>
+        <span class="result-name">M. Kubiak</span>
+        <span class="result-time">24.31</span>
+      </div>
+      <div class="result-row">
+        <span class="result-pos">3</span>
+        <span class="result-flag">🇵🇱</span>
+        <span class="result-name">A. Piskorska</span>
+        <span class="result-time">24.58</span>
+      </div>
+      <div class="result-row">
+        <span class="result-pos">4</span>
+        <span class="result-flag">🇵🇱</span>
+        <span class="result-name">Z. Kowalska-F.</span>
+        <span class="result-time">24.71</span>
+      </div>
+    </div>
+
+    <div class="cal-side">
+      <div class="cal-side-title">Najbliższe zawody</div>
+      <div class="cal-item-s">
+        <div class="cal-date-s"><div class="cal-d">01</div><div class="cal-m">maj</div></div>
+        <div><div class="cal-name-s">PŚ wody otwarte</div><div class="cal-loc-s">Golfo Aranci, ITA</div></div>
+      </div>
+      <div class="cal-item-s">
+        <div class="cal-date-s"><div class="cal-d">10</div><div class="cal-m">maj</div></div>
+        <div><div class="cal-name-s">Grand Prix PP — ed. 1</div><div class="cal-loc-s">Warszawa</div></div>
+      </div>
+      <div class="cal-item-s">
+        <div class="cal-date-s"><div class="cal-d">14</div><div class="cal-m">cze</div></div>
+        <div><div class="cal-name-s">ME Juniorów Pływanie</div><div class="cal-loc-s">Belgrad, SRB</div></div>
+      </div>
+      <div class="cal-item-s">
+        <div class="cal-date-s"><div class="cal-d">sie</div><div class="cal-m">2026</div></div>
+        <div><div class="cal-name-s">ME Senior — Paryż</div><div class="cal-loc-s">Paryż, FRA</div></div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /main -->
+>>>>>>> b302503 (Pierwszy commit z terminala)
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat"><div class="stat-n">18</div><div class="stat-l">medali — Sztokholm 2026</div></div>
+  <div class="stat"><div class="stat-n">600+</div><div class="stat-l">zawodników MP OPEN</div></div>
+  <div class="stat"><div class="stat-n">3:18.83</div><div class="stat-l">rekord Polski 4×100m</div></div>
+  <div class="stat"><div class="stat-n">1922</div><div class="stat-l">rok założenia związku</div></div>
+</div>
+
+<!-- PARTNERS -->
+<div class="partners">
+<<<<<<< HEAD
+  <div class="partners-label">Partnerzy &amp; organizacje</div>
+=======
+  <div class="partners-label">Partnerzy</div>
+>>>>>>> b302503 (Pierwszy commit z terminala)
+  <div class="partners-logos">
+    <div class="partner-logo">World Aquatics</div>
+    <div class="partner-logo">European Aquatics</div>
+    <div class="partner-logo">PKOl</div>
+    <div class="partner-logo">Ministerstwo Sportu</div>
+    <div class="partner-logo">MicroPlus Timing</div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div>
+    <div class="footer-brand">Poland Aquatics</div>
+    <div class="footer-sub">Polski Związek Pływacki od 1922 r.</div>
+<<<<<<< HEAD
+    <div class="footer-addr">ul. Cząstkowska 18<br>01-678 Warszawa<br>tel. +48 22 835 35 89<br>biuro 8:00–16:00</div>
+=======
+    <div class="footer-addr">
+      ul. Cząstkowska 18<br>
+      01-678 Warszawa<br>
+      tel. +48 22 835 35 89<br>
+      biuro czynne 8:00–16:00
+    </div>
+>>>>>>> b302503 (Pierwszy commit z terminala)
+    <div class="footer-social">
+      <a href="#" class="soc-btn">Facebook</a>
+      <a href="#" class="soc-btn">Instagram</a>
+      <a href="#" class="soc-btn">YouTube</a>
+    </div>
+  </div>
+<<<<<<< HEAD
+  <div><h4>Zawodnicy</h4><a href="#">Kadra seniorów</a><a href="#">Kadra juniorów</a><a href="#">Rekordy Polski</a><a href="#">Ranking europejski</a><a href="#">Antydoping</a></div>
+  <div><h4>Kluby &amp; trenerzy</h4><a href="#">Licencje klubowe</a><a href="#">Licencje trenerskie</a><a href="#">OZP — okręgi</a><a href="#">Regulaminy</a><a href="#">Formularze</a></div>
+  <div><h4>Związek</h4><a href="#">Zarząd</a><a href="#">Komisje</a><a href="#">Dokumenty</a><a href="#">Media / prasa</a><a href="#">Kontakt</a></div>
+</footer>
+<div class="footer-bottom">
+  <span>© 2026 Polski Związek Pływacki</span>
+  <span>
+    <span class="member-badge">Member — World Aquatics</span>
+    <span class="member-badge">Member — European Aquatics</span>
+  </span>
+</div>
+
+</div>
+=======
+  <div>
+    <h4>Zawodnicy</h4>
+    <a href="#">Kadra seniorów</a>
+    <a href="#">Kadra juniorów</a>
+    <a href="#">Rekordy Polski</a>
+    <a href="#">Ranking europejski</a>
+    <a href="#">Antydoping</a>
+  </div>
+  <div>
+    <h4>Kluby &amp; trenerzy</h4>
+    <a href="#">Licencje klubowe</a>
+    <a href="#">Licencje trenerskie</a>
+    <a href="#">OZP — okręgi</a>
+    <a href="#">Regulaminy</a>
+    <a href="#">Formularze</a>
+  </div>
+  <div>
+    <h4>Związek</h4>
+    <a href="#">Zarząd</a>
+    <a href="#">Komisje</a>
+    <a href="#">Dokumenty</a>
+    <a href="#">Media / prasa</a>
+    <a href="#">Kontakt</a>
+  </div>
+</footer>
+
+<div class="footer-bottom">
+  <span class="footer-bottom-left">© 2026 Polski Związek Pływacki</span>
+  <div class="member-badges">
+    <span class="member-badge">Member — World Aquatics</span>
+    <span class="member-badge">Member — European Aquatics</span>
+  </div>
+</div>
+
+</body>
+</html>
+>>>>>>> b302503 (Pierwszy commit z terminala)
